@@ -30,11 +30,13 @@ Check out the live demo [here](your-netlify-app-url).
    npm install
 
 ## Usage
+
 Run the app locally:
 1. npm run dev
 2. Open your browser and visit http://localhost:3000 to view the app.
 
 ## Tech Stack
+
 - React
 - Vite
 - Redux
