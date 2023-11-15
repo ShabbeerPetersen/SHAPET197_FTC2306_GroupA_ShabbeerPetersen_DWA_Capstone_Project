@@ -17,8 +17,6 @@ Check out the live demo [here](your-netlify-app-url).
 - [Installation](#installation)
 - [Usage](#usage)
 - [Tech Stack](#tech-stack)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
@@ -37,7 +35,7 @@ Run the app locally:
 2. Open your browser and visit http://localhost:3000 to view the app.
 
 ## Tech Stack
--React
--Vite
--Redux
--Netlify
+- React
+- Vite
+- Redux
+- Netlify
