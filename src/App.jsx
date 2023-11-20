@@ -1,5 +1,5 @@
 import React from "react";
-import { PrismaneProvider } from "@prismane/core";
+import { PRISMANE_COLORS, PrismaneProvider } from "@prismane/core";
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
