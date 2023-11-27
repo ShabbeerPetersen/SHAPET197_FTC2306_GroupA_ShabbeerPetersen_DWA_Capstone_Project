@@ -1,68 +1,214 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.header-container {
+  background-color: #282828;
+  padding: 10px 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  color: #fff;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* Header Content */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-a:hover {
-  color: #535bf2;
+
+.stickyHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* App Name */
+.app-name {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Favorites Button */
+.favorites-button {
+  padding: 8px 12px;
+  background-color: #1db954;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.favorites-button:hover {
+  background-color: #1ed760;
 }
 
 body {
-  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.toolbar {
+  margin: 0 !important;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  border-radius: 0% !important;
+}
+
+.d-none {
+  display: block !important;
+}
+
+.transparent-blur {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Set the background color with transparency */
+  backdrop-filter: blur(10px); /* Add the blur effect */
+  border: 1px solid #ccc;
+}
+
+.parent {
+  position: relative;
+  /* Add other styles for the parent element if needed */
+}
+
+.login-container {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.login-form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: crimson;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.login-form button:hover {
+  background: crimson;
+  background-color: crimson;
+}
+
+.recommended {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Set the background color with transparency */
+  color: whitesmoke;
+  padding: 5px 10px;
+  /* Add other styles for the "Recommended" element */
+  z-index: 100;
+}
+
+.show-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.show-image {
+  max-width: 200px; /* Adjust the value as needed to make the image smaller */
+  height: auto;
+  margin: 20px auto; /* Use auto margin to center the image horizontally */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.show-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.show-description {
+  margin-bottom: 10px;
+}
+
+.show-genres {
+  margin-bottom: 10px;
+}
+
+.show-seasons {
+  margin-bottom: 20px;
+}
+
+.season-buttons {
+  overflow-x: auto;
+}
+
+.season-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.selected-season-details {
+  margin-top: 30px;
+}
+
+.selected-season {
+  font-weight: bold;
+}
+
+.selected-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.selected-episodes {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.episode {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.episode-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.episode-description {
+  margin-bottom: 10px;
 }

@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { PrismaneProvider } from "@prismane/core";
-import App from './App.jsx'
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import './index.css'
+import App from './App.jsx'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <PrismaneProvider>
-      <App />
-    </PrismaneProvider>
+    <App />
   </React.StrictMode>,
 )

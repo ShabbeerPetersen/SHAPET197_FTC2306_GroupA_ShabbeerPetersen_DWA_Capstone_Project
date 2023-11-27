@@ -1,8 +1,24 @@
-# React + Vite
+# SHAPET197_FTC2306_GroupA_ShabbeerPetersen_PodcastApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## MetaPod
 
-Currently, two official plugins are available:
+# DWA Capstone project for CodeSpace.
+* A PodCast application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Authors
+- Shabbeer Petersen
+
+# Technologies
+* Javascript
+* HTML
+* CSS
+* ReactJS
+* SupaBase
+* MUI
+* VSCode
+
+hosted @ 
+
+user details for testing purposes;
+email = shabbeerexilepetersen@gmail.com
+password = kQZ8_N#r#cw4*Q%
