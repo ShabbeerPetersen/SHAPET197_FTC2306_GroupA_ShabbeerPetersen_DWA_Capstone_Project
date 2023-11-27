@@ -36,7 +36,7 @@ const ShowDetails = (props) => {
     return <div>Loading data via Slowpoke...</div>;
   }
 
-  const { description, id, image, seasons, title, updated } = result;
+  const { description, image, seasons, title } = result;
 
   const genreObject = currentShow.find((item) => item.id === showId);
 
@@ -53,11 +53,9 @@ const ShowDetails = (props) => {
     setSelectedSeason(selectedValue);
   };
 
-  const allEpisodes = seasons.flatMap((season) => season.episodes);
-
   const [selectedSeason, setSelectedSeason] = useState(null);
   const [favoriteEpisodes, setFavoriteEpisodes] = useState([]);
-  const [currentUser, setCurrentUser] = useState("");
+  const [setCurrentUser] = useState("");
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const [showConfirmationModal, setShowConfirmationModal] = useState(false);
   const [episodeProgress, setEpisodeProgress] = useState({});
@@ -163,7 +161,7 @@ const ShowDetails = (props) => {
         return;
       }
 
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from("favorites")
         .delete()
         .eq("user_id", (await supabase.auth.getUser()).data.user.id)
@@ -189,7 +187,7 @@ const ShowDetails = (props) => {
     }
 
     try {
-      const { data, error } = await supabase.from("favorites").insert({
+      const { error } = await supabase.from("favorites").insert({
         user_id: (await supabase.auth.getUser()).data.user.id,
         show_id: episodes[episodes.length - 1].showId,
         season_number: episodes[episodes.length - 1].seasonNumber + 1,
@@ -276,7 +274,6 @@ const ShowDetails = (props) => {
             <ul>
               {seasons[selectedSeason].episodes.map((episode, index) => {
                 const episodeKey = `${showId}_${selectedSeason}_${index}`;
-                const progress = episodeProgress[episodeKey] || 0;
                 return (
                   <li key={index}>
                     <p className="episode">Episode: {episode.episode}</p>
@@ -336,7 +333,6 @@ const ShowDetails = (props) => {
               <ul>
                 {season.episodes.map((episode, episodeIndex) => {
                   const episodeKey = `${showId}_${seasonIndex}_${episodeIndex}`;
-                  const progress = episodeProgress[episodeKey] || 0;
                   return (
                     <li key={episodeIndex}>
                       <p className="episode">Episode: {episode.episode}</p>
@@ -393,8 +389,8 @@ const ShowDetails = (props) => {
         <div className="confirmation-modal">
           <h3>Confirm Leaving</h3>
           <p>
-            Are you sure you want to leave? Audio is still playing. Click
-            "Leave" to close the page or "Cancel" to stay on the page.
+            Are you sure you want to leave? Audio is still playing. Click on
+            Leave button to close the page or Cancel to stay on the page.
           </p>
           <div>
             <button onClick={handleConfirmation}>Leave</button>
