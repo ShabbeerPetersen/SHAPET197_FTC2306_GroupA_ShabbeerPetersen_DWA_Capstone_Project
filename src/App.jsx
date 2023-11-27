@@ -5,7 +5,7 @@ import LandingPage from '../components/LandingPage';
 import Recommendations from '../components/Recommendations';
 import ShowDetails from '../components/ShowDetails';
 import Login from '../components/Login';
-import Signup from "../components/Signup"
+import SignUp from '../components/SignUp';
 import Favorites from "../components/Favorites"
 import SuccessfulSignUP from '../components/SuccessfulSignUP';
 import LoadingPage from '../components/LoadingPage';
@@ -123,7 +123,7 @@ const App = () => {
           }
         />
         <Route exact path="/login" element={<Login signIn={handleSignIn} />} />
-        <Route exact path="/signup" element={<Signup />} />
+        <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/success" element={<SuccessfulSignUP />} />
       </Routes>
     </Router>
