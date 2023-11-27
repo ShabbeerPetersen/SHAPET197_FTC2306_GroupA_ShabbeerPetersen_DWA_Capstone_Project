@@ -17,7 +17,7 @@
 * MUI
 * VSCode
 
-hosted @ 
+hosted @ https://metapod.netlify.app/
 
 user details for testing purposes;
 email = shabbeerexilepetersen@gmail.com
