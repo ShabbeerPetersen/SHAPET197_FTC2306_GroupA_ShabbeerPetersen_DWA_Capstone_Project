@@ -18,7 +18,7 @@
 * VSCode
 
 hosted @ https://metapod.netlify.app/
+you may use the following details to sign in to the application, else use your own details and verify via your emails:
 
-user details for testing purposes;
 email = shabbeerexilepetersen@gmail.com
 password = kQZ8_N#r#cw4*Q%
