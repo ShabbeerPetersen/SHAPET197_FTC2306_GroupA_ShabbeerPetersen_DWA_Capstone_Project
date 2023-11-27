@@ -11,7 +11,7 @@ import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import SignUp from "./SignUp";
+import SignUp from "./Signup";
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
