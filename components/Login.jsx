@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
+import { useNavigate } from 'react-router-dom'; // Using useNavigate instead of useHistory
 import supabase from "../supabase";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
