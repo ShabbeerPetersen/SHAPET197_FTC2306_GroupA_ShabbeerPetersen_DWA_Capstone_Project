@@ -122,9 +122,9 @@ const App = () => {
             />
           }
         />
-        <Route path="/login" element={<Login signIn={handleSignIn} />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/success" element={<SuccessfulSignUP />} />
+        <Route exact path="/login" element={<Login signIn={handleSignIn} />} />
+        <Route exact path="/signup" element={<SignUp />} />
+        <Route exact path="/success" element={<SuccessfulSignUP />} />
       </Routes>
     </Router>
   );
