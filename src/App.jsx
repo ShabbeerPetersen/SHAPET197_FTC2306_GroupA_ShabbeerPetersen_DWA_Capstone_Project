@@ -122,8 +122,8 @@ const App = () => {
             />
           }
         />
-        <Route exact path="/login" element={<LoginPage signIn={handleSignIn} />} />
-        <Route exact path="/signup" element={<SignUpage />} />
+        <Route exact path="/login" element={<Login signIn={handleSignIn} />} />
+        <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/success" element={<SuccessfulSignUP />} />
       </Routes>
     </Router>
