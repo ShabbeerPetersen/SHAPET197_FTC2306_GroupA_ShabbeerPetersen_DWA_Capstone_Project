@@ -4,8 +4,8 @@ import Header from '../components/Header';
 import LandingPage from '../components/LandingPage';
 import Recommendations from '../components/Recommendations';
 import ShowDetails from '../components/ShowDetails';
-import Login from '../components/Login';
-import SignUp from '../components/SignUp';
+import Login from '../components/LoginPage';
+import SignUp from '../components/SignUpPage';
 import Favorites from "../components/Favorites"
 import SuccessfulSignUP from '../components/SuccessfulSignUP';
 import LoadingPage from '../components/LoadingPage';
