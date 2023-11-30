@@ -67,7 +67,7 @@ const Favorites = (props) => {
             };
           });
 
-          Promise.all(favoriteEpisodesData).then((data) => {
+          await Promise.all(favoriteEpisodesData).then((data) => {
             setFavoriteEpisodes(data);
             setIsLoading(false);
           });
@@ -104,7 +104,7 @@ const Favorites = (props) => {
 
     fetchData();
     fetchFavoriteEpisodes();
-  }, [showsData, userId]);
+  }, [showsData, userId, allPreviewData]);
 
   const getShowTitle = (showId) => {
     const show = showsData.find((item) => item.id === showId);
