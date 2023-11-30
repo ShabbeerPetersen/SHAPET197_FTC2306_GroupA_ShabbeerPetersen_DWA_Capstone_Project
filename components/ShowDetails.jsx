@@ -4,6 +4,7 @@ import "../src/index.css";
 import { MenuItem, Toolbar, Stack, Typography, Select } from "@mui/material";
 import { MDBBtn } from "mdb-react-ui-kit";
 import supabase from "../supabase";
+import LoadingPage from "./LoadingPage";
 
 const genreList = [
   "Personal Growth",
@@ -33,7 +34,7 @@ const ShowDetails = (props) => {
   const result = showData.find((item) => item.id === showId);
 
   if (!result) {
-    return <div>Loading data via Slowpoke...</div>;
+    return <LoadingPage/>;
   }
 
   const { description, image, seasons, title } = result;
@@ -41,7 +42,7 @@ const ShowDetails = (props) => {
   const genreObject = currentShow.find((item) => item.id === showId);
 
   if (!genreObject) {
-    return <div>Loading data via Slowpoke...</div>;
+    return <LoadingPage/>;
   }
 
   const { genres } = genreObject;
@@ -77,7 +78,7 @@ const ShowDetails = (props) => {
             showId: episode.show_id,
             seasonNumber: episode.season_number - 1,
             episodeNumber: episode.episode_number - 1,
-            dateAdded: new Date(episode.time_added),
+            dateAdded: new Date(episode.time),
           }));
           setFavoriteEpisodes(favoriteEpisodesData);
         }
@@ -192,7 +193,7 @@ const ShowDetails = (props) => {
         show_id: episodes[episodes.length - 1].showId,
         season_number: episodes[episodes.length - 1].seasonNumber + 1,
         episode_number: episodes[episodes.length - 1].episodeNumber + 1,
-        time_added: new Date(),
+        time: new Date(),
       });
       if (error) {
         console.error("Error saving favorite episodes:", error.message);
