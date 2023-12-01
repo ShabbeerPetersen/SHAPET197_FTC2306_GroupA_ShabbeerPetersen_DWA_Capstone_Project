@@ -43,7 +43,7 @@ function LandingPage(props) {
 
   const navigate = useNavigate();
 
-  const shortenString = (text, maxLength, readMoreText = "... Read more") => {
+  const shortenString = (text, maxLength, readMoreText = "... Open to read more") => {
     if (text.length <= maxLength) {
       return text;
     }
@@ -133,7 +133,7 @@ function LandingPage(props) {
         md={4}
         onClick={() => handleShowClick(id)}
       >
-        <Card className="rounded-4 hover-shadow" sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+        <Card className="rounded-4 hover-shadow" sx={{ height: "100%", display: "flex", flexDirection: "column", backgroundColor: "lightgray" }} >
           <CardMedia component="div" sx={{ pt: "100%" }} image={image} />
           <CardContent sx={{ flexGrow: 1 }}>
             <Typography gutterBottom variant="h5" component="h2">
@@ -201,6 +201,7 @@ function LandingPage(props) {
             placeholder="Got a show in mind? Search here..."
             value={searchQuery}
             onChange={handleSearchInputChange}
+            
             style={{
               width: "100%",
               padding: "8px",
