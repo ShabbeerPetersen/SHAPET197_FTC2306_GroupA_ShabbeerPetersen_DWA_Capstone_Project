@@ -22,13 +22,16 @@ const Favorites = (props) => {
   const [sortOption, setSortOption] = useState("All");
   const [audioPlaying, setAudioPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isAudioSticky, setIsAudioSticky] = useState(false);
 
   const handleAudioPlay = () => {
     setAudioPlaying(true);
+    setIsAudioSticky(true);
   };
 
   const handleAudioPause = () => {
     setAudioPlaying(false);
+    setIsAudioSticky(false);
   };
 
   const fetchFavoriteEpisodes = async () => {
@@ -324,7 +327,7 @@ const Favorites = (props) => {
   }, [showsData, userId, audioPlaying]);
 
   return (
-    <div className="favorites-container">
+    <div className={`favorites-container${isAudioSticky ? 'sticky-audio' : ''}`}>
       <h1>Favorites</h1>
       <AppBar style={{backgroundColor: 'crimson'}} position="relative">
         <Toolbar>
