@@ -26,6 +26,10 @@
   color: #fff;
 }
 
+.favorite-episode {
+  background-color: lightgray;
+}
+
 /* Favorites Button */
 .favorites-button {
   padding: 8px 12px;
