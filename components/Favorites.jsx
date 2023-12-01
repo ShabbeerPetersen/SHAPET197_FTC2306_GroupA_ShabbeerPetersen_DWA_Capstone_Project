@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import supabase from "../supabase";
+import "../src/index.css";
+import { MDBBtn } from "mdb-react-ui-kit";
 import AppBar from "@mui/material/AppBar";
 import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
@@ -241,9 +243,9 @@ const Favorites = (props) => {
                             <source src={episodeData.file} type="audio/mpeg" />
                             Your browser does not support the audio element.
                           </audio>
-                          <button onClick={() => handleRemoveFromFavorites(id)}>
+                          <MDBBtn style={{backgroundColor:"crimson"}} onClick={() => handleRemoveFromFavorites(id)}>
                             Remove from Favorites
-                          </button>
+                          </MDBBtn>
                         </div>
                       );
                     }
@@ -287,9 +289,9 @@ const Favorites = (props) => {
                     <source src={episodeData.file} type="audio/mpeg" />
                     Your browser does not support the audio element.
                   </audio>
-                  <button onClick={() => handleRemoveFromFavorites(id)}>
+                  <MDBBtn style={{backgroundColor:"crimson"}} onClick={() => handleRemoveFromFavorites(id)}>
                     Remove from Favorites
-                  </button>
+                  </MDBBtn>
                 </div>
               );
             }
