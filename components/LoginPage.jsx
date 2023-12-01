@@ -11,6 +11,7 @@ import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import "../src/index.css";
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
@@ -58,10 +59,11 @@ const Login = (props) => {
           Log in
         </Typography>
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-          <TextField sx={{ bgcolor: "crimson" }}
+          <TextField
             margin="normal"
             required
             fullWidth
+            InputLabelProps={{ style: { color: 'crimson' } }}
             id="email"
             label="Email Address"
             name="email"
@@ -70,10 +72,11 @@ const Login = (props) => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <TextField sx={{ bgcolor: "crimson" }}
+          <TextField
             margin="normal"
             required
             fullWidth
+            InputLabelProps={{ style: { color: 'crimson' } }}
             name="password"
             label="Password"
             type="password"
@@ -84,8 +87,9 @@ const Login = (props) => {
           />
           <Button
             type="submit"
+            class="login-button"
             fullWidth
-            variant="contained"
+            variant="contained" 
             sx={{ mt: 3, mb: 2, bgcolor: "crimson"}}
           >
             Log In

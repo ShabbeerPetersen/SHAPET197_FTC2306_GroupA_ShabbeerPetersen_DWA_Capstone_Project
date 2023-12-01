@@ -108,7 +108,7 @@ body {
   border-radius: 5px;
 }
 
-.login-form button {
+.login-button {
   width: 100%;
   padding: 10px;
   background-color: crimson;
@@ -118,9 +118,9 @@ body {
   cursor: pointer;
 }
 
-.login-form button:hover {
-  background: crimson;
-  background-color: crimson;
+.login-button:hover {
+  background: rgb(255, 0, 51);
+  background-color: rgb(255, 0, 51);
 }
 
 .recommended {
